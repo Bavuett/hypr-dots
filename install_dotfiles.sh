@@ -3,15 +3,22 @@ set -eu
 
 REPO_DIR="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
 BACKUP_SUFFIX=".bak.$(date +%Y%m%d%H%M%S)"
+BACKUP_DIR="$HOME/.dotfiles-backup$BACKUP_SUFFIX"
 
 mkdir -p "$HOME/.config"
 
-if [ -d "$HOME/.config" ] && [ "$(ls -A "$HOME/.config" 2>/dev/null)" ]; then
-  cp -r "$HOME/.config" "$HOME/.config$BACKUP_SUFFIX"
-fi
+for source in "$REPO_DIR"/.config/*; do
+  item="$(basename "$source")"
+  target="$HOME/.config/$item"
+  if [ -e "$target" ]; then
+    mkdir -p "$BACKUP_DIR/.config"
+    cp -r "$target" "$BACKUP_DIR/.config/$item"
+  fi
+done
 
 if [ -f "$HOME/.bashrc" ]; then
-  cp "$HOME/.bashrc" "$HOME/.bashrc$BACKUP_SUFFIX"
+  mkdir -p "$BACKUP_DIR"
+  cp "$HOME/.bashrc" "$BACKUP_DIR/.bashrc"
 fi
 
 cp -r "$REPO_DIR/.config/." "$HOME/.config/"

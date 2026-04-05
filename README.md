@@ -59,6 +59,7 @@ sudo dnf install -y \
     hyprshot \
     cliphist \
     wl-clipboard \
+    polkit-gnome \
     nm-applet \
     brightnessctl \
     playerctl \
