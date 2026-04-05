@@ -9,8 +9,8 @@ A pastel-themed Hyprland rice for Fedora, inspired by [ViegPhunt/Dotfiles](https
 | Primary    | `#f5b8c6` | 🌸 Pastel Pink |
 | Secondary  | `#fffaa0` | 🌼 Pastel Yellow |
 | Tertiary   | `#aec6cf` | 🩵 Pastel Blue |
-| Background | `#1e1a2e` | 🌑 Deep Purple |
-| Foreground | `#f2e8f5` | 🤍 Soft White |
+| Background | `#fff7f3` | 🌤️ Soft Spring Cream |
+| Foreground | `#6b5b73` | 🌷 Dusty Lavender |
 
 ## 📦 Included Configurations
 

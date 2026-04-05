@@ -1,13 +1,13 @@
-/* Pastel color palette */
-@define-color background #1e1a2e;
-@define-color foreground #f2e8f5;
-@define-color select     #3d3552;
+/* Spring pastel color palette */
+@define-color background #fff7f3;
+@define-color foreground #6b5b73;
+@define-color select     #f7d9e5;
 
 @define-color pink       #f5b8c6;
 @define-color yellow     #fffaa0;
 @define-color blue       #aec6cf;
-@define-color purple     #c9b8f5;
-@define-color red        #f5b8b8;
-@define-color orange     #f5d4b8;
-@define-color green      #b8f5c6;
-@define-color gray       #4a4a5e;
+@define-color purple     #d8c6f2;
+@define-color red        #f2aeb8;
+@define-color orange     #f6d7b2;
+@define-color green      #bdeccf;
+@define-color gray       #cbb9c4;
