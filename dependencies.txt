@@ -1,6 +1,10 @@
 sudo dnf install -y \
     hyprland \
     hyprlock \
+    neovim \
+    git \
+    ripgrep \
+    fd-find \
     waybar \
     kitty \
     wofi \

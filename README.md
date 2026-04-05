@@ -20,6 +20,7 @@ A pastel-themed Hyprland rice for Fedora, inspired by [ViegPhunt/Dotfiles](https
 - **Prompt**: `starship` (pastel theme)
 - **Status Bar**: `waybar` with pastel styling
 - **Launcher**: `wofi` (pastel styled)
+- **Editor**: `neovim` with `lazy.nvim` + `pastel.nvim` (`pastelglow`)
 - **Notifications**: `swaync`
 - **Logout Menu**: `wlogout`
 - **Lockscreen**: `hyprlock`
@@ -33,6 +34,7 @@ A pastel-themed Hyprland rice for Fedora, inspired by [ViegPhunt/Dotfiles](https
 │   ├── hypr/           # Hyprland + hyprlock config
 │   │   └── conf/       # Modular hyprland configs
 │   ├── kitty/          # Kitty terminal config
+│   ├── nvim/           # Neovim config (lazy.nvim + plugins)
 │   ├── waybar/         # Status bar config and style
 │   ├── wofi/           # App launcher config and style
 │   ├── swaync/         # Notification center config and style
@@ -50,6 +52,10 @@ A pastel-themed Hyprland rice for Fedora, inspired by [ViegPhunt/Dotfiles](https
 sudo dnf install -y \
     hyprland \
     hyprlock \
+    neovim \
+    git \
+    ripgrep \
+    fd-find \
     waybar \
     kitty \
     wofi \
@@ -123,3 +129,4 @@ The color palette is centralized in `.config/colors/colors.css`. All components 
 
 The Starship prompt colors are configured in `.config/starship.toml`.
 The Kitty terminal colors are in `.config/kitty/kitty.conf`.
+The Neovim theme is configured in `.config/nvim/lua/plugins/colorscheme.lua` and uses `pastelglow`.
