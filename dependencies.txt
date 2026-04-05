@@ -1,6 +1,10 @@
 sudo dnf install -y \
     hyprland \
     hyprlock \
+    neovim \
+    git \
+    ripgrep \
+    fd-find \
     waybar \
     kitty \
     wofi \
@@ -15,7 +19,7 @@ sudo dnf install -y \
     brightnessctl \
     playerctl \
     blueman \
-    pavucontrol \
+    pavucontrol 
 
 curl -fsSLo /tmp/install-starship.sh https://starship.rs/install.sh
 sh /tmp/install-starship.sh
