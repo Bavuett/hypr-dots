@@ -1,0 +1,23 @@
+sudo dnf install -y \
+    hyprland \
+    hyprlock \
+    waybar \
+    kitty \
+    wofi \
+    swaync \
+    wlogout \
+    swww \
+    hyprshot \
+    cliphist \
+    wl-clipboard \
+    nm-applet \
+    brightnessctl \
+    playerctl \
+    blueman \
+    pavucontrol \
+    nemo \
+    firefox
+
+curl -sS https://starship.rs/install.sh | sh
+
+sudo dnf install -y jetbrains-mono-fonts
