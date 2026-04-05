@@ -1,0 +1,67 @@
+/* Wofi pastel style */
+
+window {
+    margin: 0;
+    border: 2px solid #f5b8c6;
+    border-radius: 12px;
+    background-color: rgba(30, 26, 46, 0.92);
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 14px;
+}
+
+#input {
+    margin: 8px;
+    border: 1px solid rgba(245, 184, 198, 0.4);
+    border-radius: 8px;
+    padding: 8px 12px;
+    color: #f2e8f5;
+    background-color: rgba(61, 53, 82, 0.7);
+    outline: none;
+}
+
+#input:focus {
+    border-color: #f5b8c6;
+    background-color: rgba(61, 53, 82, 0.9);
+}
+
+#scroll {
+    margin: 0 4px 4px 4px;
+}
+
+#inner-box {
+    margin: 0;
+    padding: 4px;
+}
+
+#outer-box {
+    margin: 0;
+    padding: 4px;
+}
+
+#text {
+    color: #f2e8f5;
+    padding: 2px 8px;
+}
+
+#entry {
+    border-radius: 8px;
+    padding: 4px 8px;
+    margin: 2px 4px;
+}
+
+#entry:selected {
+    background-color: rgba(245, 184, 198, 0.25);
+    border-left: 3px solid #f5b8c6;
+}
+
+#entry:selected #text {
+    color: #f5b8c6;
+}
+
+#img {
+    margin-right: 8px;
+}
+
+#unselected {
+    opacity: 0.9;
+}

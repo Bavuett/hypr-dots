@@ -1,0 +1,106 @@
+# Starship prompt - pastel theme
+# Colors: #f5b8c6 (pink/primary), #fffaa0 (yellow/secondary), #aec6cf (blue/tertiary)
+
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[╭─](bold #4a4a5e)$os$username$hostname$directory$git_branch$git_status$python$nodejs$rust$golang$java$package
+[╰─](bold #4a4a5e)$character"""
+
+add_newline = true
+
+[character]
+success_symbol = "[❯](bold #f5b8c6)"
+error_symbol = "[❯](bold #f5b8b8)"
+vimcmd_symbol = "[❮](bold #b8f5c6)"
+
+[os]
+disabled = false
+style = "bold #aec6cf"
+
+[os.symbols]
+Fedora = " "
+Linux = " "
+
+[username]
+style_user = "bold #f5b8c6"
+style_root = "bold #f5b8b8"
+format = "[$user]($style) "
+show_always = false
+
+[hostname]
+style = "bold #fffaa0"
+format = "[@$hostname]($style) "
+ssh_only = true
+
+[directory]
+style = "bold #aec6cf"
+format = "[$path]($style)[$read_only]($read_only_style) "
+truncation_length = 4
+truncation_symbol = "…/"
+read_only = " 󰌾"
+read_only_style = "#f5b8b8"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Videos" = " "
+
+[git_branch]
+symbol = " "
+style = "bold #c9b8f5"
+format = "on [$symbol$branch]($style) "
+
+[git_status]
+style = "bold #fffaa0"
+format = '([$all_status$ahead_behind]($style) )'
+conflicted = "⚡"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+untracked = "?"
+stashed = "󰄤"
+modified = "!"
+staged = "+"
+renamed = "»"
+deleted = "✘"
+
+[python]
+symbol = " "
+style = "bold #fffaa0"
+format = "[$symbol($virtualenv )]($style)"
+
+[nodejs]
+symbol = " "
+style = "bold #b8f5c6"
+format = "[$symbol($version )]($style)"
+
+[rust]
+symbol = " "
+style = "bold #f5d4b8"
+format = "[$symbol($version )]($style)"
+
+[golang]
+symbol = " "
+style = "bold #aec6cf"
+format = "[$symbol($version )]($style)"
+
+[java]
+symbol = " "
+style = "bold #f5b8b8"
+format = "[$symbol($version )]($style)"
+
+[package]
+symbol = "󰏗 "
+style = "bold #c9b8f5"
+format = "[$symbol$version]($style) "
+disabled = false
+
+[time]
+disabled = true
+
+[cmd_duration]
+min_time = 2000
+format = "took [$duration](bold #fffaa0) "
