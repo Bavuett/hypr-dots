@@ -69,7 +69,8 @@ sudo dnf install -y \
     firefox
 
 # Install starship prompt
-curl -sS https://starship.rs/install.sh | sh
+curl -fsSLo /tmp/install-starship.sh https://starship.rs/install.sh
+sh /tmp/install-starship.sh
 
 # Install JetBrainsMono Nerd Font
 sudo dnf install -y jetbrains-mono-fonts
@@ -105,7 +106,7 @@ swww img /path/to/your/wallpaper.jpg --transition-type fade
 | `Super + Space` | Open terminal (kitty) |
 | `Alt + Space` | Open app launcher (wofi) |
 | `Super + B` | Open browser (firefox) |
-| `Super + E` | Open file manager |
+| `Super + E` | Open file manager (nemo) |
 | `Super + Q` | Close window |
 | `Super + F` | Toggle floating |
 | `Super + L` | Lock screen (hyprlock) |

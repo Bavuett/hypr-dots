@@ -19,6 +19,7 @@ sudo dnf install -y \
     nemo \
     firefox
 
-curl -sS https://starship.rs/install.sh | sh
+curl -fsSLo /tmp/install-starship.sh https://starship.rs/install.sh
+sh /tmp/install-starship.sh
 
 sudo dnf install -y jetbrains-mono-fonts
