@@ -16,8 +16,6 @@ sudo dnf install -y \
     playerctl \
     blueman \
     pavucontrol \
-    nemo \
-    firefox
 
 curl -fsSLo /tmp/install-starship.sh https://starship.rs/install.sh
 sh /tmp/install-starship.sh
