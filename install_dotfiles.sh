@@ -27,3 +27,4 @@ if [ -f "$REPO_DIR/.bashrc" ]; then
 fi
 
 echo "Dotfiles copied to $HOME"
+echo "Backups (if created): $BACKUP_DIR"
