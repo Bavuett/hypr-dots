@@ -71,8 +71,8 @@ sudo dnf install -y \
     playerctl \
     blueman \
     pavucontrol \
-    nemo \
-    firefox
+    nautilus \
+    google-chrome-stable
 
 # Install starship prompt
 curl -fsSLo /tmp/install-starship.sh https://starship.rs/install.sh
@@ -112,8 +112,8 @@ swww img /path/to/your/wallpaper.jpg --transition-type fade
 | `Super + Space` | Open terminal (kitty) |
 | `Alt + Space` | Open app launcher (wofi) |
 | `Super + R` | Open app launcher (wofi) |
-| `Super + B` | Open browser (firefox) |
-| `Super + E` | Open file manager (nemo) |
+| `Super + B` | Open browser (google-chrome-stable) |
+| `Super + E` | Open file manager (nautilus) |
 | `Super + Q` | Close window |
 | `Super + F` | Toggle floating |
 | `Super + L` | Lock screen (hyprlock) |

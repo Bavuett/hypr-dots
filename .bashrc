@@ -47,7 +47,7 @@ fi
 # Wayland / Hyprland environment
 export EDITOR=nvim
 export VISUAL=nvim
-export BROWSER=firefox
+export BROWSER=google-chrome-stable
 export TERMINAL=kitty
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
