@@ -22,6 +22,8 @@ if [ -f "$HOME/.bashrc" ]; then
 fi
 
 cp -r "$REPO_DIR/.config/." "$HOME/.config/"
-cp "$REPO_DIR/.bashrc" "$HOME/.bashrc"
+if [ -f "$REPO_DIR/.bashrc" ]; then
+  cp "$REPO_DIR/.bashrc" "$HOME/.bashrc"
+fi
 
 echo "Dotfiles copied to $HOME"
