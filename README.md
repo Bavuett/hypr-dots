@@ -105,6 +105,7 @@ swww img /path/to/your/wallpaper.jpg --transition-type fade
 |---------|--------|
 | `Super + Space` | Open terminal (kitty) |
 | `Alt + Space` | Open app launcher (wofi) |
+| `Super + R` | Open app launcher (wofi) |
 | `Super + B` | Open browser (firefox) |
 | `Super + E` | Open file manager (nemo) |
 | `Super + Q` | Close window |
