@@ -11,10 +11,11 @@
 
 window,
 tooltip {
-    background: alpha(@background, 0.90);
-    border: 2px solid @pink;
+    background: alpha(@background, 0.45);
+    border: 2px solid @vibrant-border;
     border-radius: 6px;
 }
+
 tooltip label {
     color: @foreground;
     font-weight: 600;
@@ -27,14 +28,14 @@ tooltip label {
 
 /* Workspaces */
 #workspaces {
-    background: alpha(@background, 0.70);
-    border: 2px solid @pink;
+    background: alpha(@background, 0.30);
+    border: 2px solid @vibrant-border;
     border-radius: 6px;
     padding: 0 4px;
 }
 
 #workspaces button {
-    color: @foreground;
+    color: @hc-lavender;
     border: none;
     padding: 0 8px;
     margin: 4px 2px;
@@ -48,9 +49,9 @@ tooltip label {
 }
 
 #workspaces button.active {
-    color: @foreground;
+    color: @background;
     font-weight: 800;
-    background-color: @pink;
+    background-color: @hc-blue;
 }
 
 #workspaces button.urgent {
@@ -60,10 +61,10 @@ tooltip label {
 
 /* Window title */
 #window {
-    background: alpha(@background, 0.70);
-    border: 2px solid @pink;
+    background: alpha(@background, 0.30);
+    border: 2px solid @vibrant-border;
     border-radius: 6px;
-    color: @foreground;
+    color: @hc-blue;
     font-weight: bold;
     padding: 0 14px;
 }
@@ -77,8 +78,8 @@ tooltip label {
 #battery,
 #pulseaudio,
 #clock {
-    background: alpha(@background, 0.70);
-    border: 2px solid @pink;
+    background: alpha(@background, 0.30);
+    border: 2px solid @vibrant-border;
     border-radius: 6px;
     color: @foreground;
     padding: 0 12px;
@@ -92,7 +93,7 @@ tooltip label {
     padding: 0 16px;
     border: 2px solid @background;
     border-radius: 6px;
-    box-shadow: 0 0 10px 0 rgba(0,0,0,0.4);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
 }
 
 #custom-notification:hover,
@@ -106,15 +107,15 @@ tooltip label {
 }
 
 #bluetooth {
-    color: @orange-text;
+    color: @hc-lavender;
 }
 
 #network {
-    color: @blue-text;
+    color: @hc-blue;
 }
 
 #battery {
-    color: @purple-text;
+    color: @hc-mint;
 }
 
 #battery.charging {
@@ -135,7 +136,7 @@ tooltip label {
 }
 
 #pulseaudio {
-    color: @blue-text;
+    color: @hc-lavender;
 }
 
 #pulseaudio.muted {
@@ -143,7 +144,7 @@ tooltip label {
 }
 
 #clock {
-    color: @pink-text;
+    color: @hc-yellow;
 }
 
 #custom-power {
@@ -153,7 +154,7 @@ tooltip label {
 }
 
 #custom-notification {
-    color: @orange-text;
+    color: @hc-lavender;
     padding: 0 14px 0 10px;
 }
 

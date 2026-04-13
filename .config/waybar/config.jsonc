@@ -29,11 +29,14 @@
     },
     "hyprland/window": {
         "format": "{}",
+        "rewrite": {
+            "(^$)": "Hyprland"
+        },
         "max-length": 50,
         "separate-outputs": true
     },
     "hyprland/submap": {
-        "format": "✌️ {} MODE",
+        "format": "✌️ {} mode",
         "tooltip": false
     },
     "clock": {

@@ -13,12 +13,12 @@
 }
 
 window {
-    background: rgba(255, 247, 243, 0.55);
+    background: rgba(0, 0, 0, 0.1);
     font-size: 0px;
 }
 
 button {
-    background: rgba(247, 217, 229, 0.55);
+    background: rgba(255, 255, 255, 0.05);
     outline-style: none;
     border: 2px solid rgba(245, 184, 198, 0.45);
     border-width: 2px;
@@ -34,14 +34,14 @@ button {
 
 button:hover {
     background-size: 52%;
-    background-color: rgba(245, 184, 198, 0.28);
+    background-color: rgba(255, 255, 255, 0.15);
     border-color: @pink;
     animation: glowing-pink 2s ease infinite alternate;
     outline-style: none;
 }
 
 button:focus {
-    background-color: rgba(245, 184, 198, 0.35);
+    background-color: rgba(255, 255, 255, 0.15);
     border-color: @pink;
 }
 
