@@ -10,9 +10,9 @@
 
     "control-center-width": 400,
     "control-center-height": 850,
-    "control-center-margin-top": 10,
-    "control-center-margin-bottom": 10,
-    "control-center-margin-right": 10,
+    "control-center-margin-top": 6,
+    "control-center-margin-bottom": 6,
+    "control-center-margin-right": 6,
     "control-center-margin-left": 0,
 
     "notification-window-width": 380,
@@ -68,7 +68,7 @@
         "buttons-grid": {
             "actions": [
                 {
-                    "label": " ",
+                    "label": "󰤨",
                     "type": "toggle",
                     "active": true,
                     "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && nmcli radio wifi on || nmcli radio wifi off'",
@@ -80,20 +80,6 @@
                     "active": true,
                     "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && rfkill unblock bluetooth || rfkill block bluetooth'",
                     "update-command": "sh -c \"rfkill list bluetooth | grep -q 'Soft blocked: no' && echo true || echo false\""
-                },
-                {
-                    "label": " ",
-                    "type": "toggle",
-                    "active": false,
-                    "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && pactl set-source-mute @DEFAULT_SOURCE@ 1 || pactl set-source-mute @DEFAULT_SOURCE@ 0'",
-                    "update-command": "sh -c '[[ $(pactl get-source-mute @DEFAULT_SOURCE@) == *yes* ]] && echo true || echo false'"
-                },
-                {
-                    "label": " ",
-                    "type": "toggle",
-                    "active": false,
-                    "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && pactl set-sink-mute @DEFAULT_SINK@ 1 || pactl set-sink-mute @DEFAULT_SINK@ 0'",
-                    "update-command": "sh -c '[[ $(pactl get-sink-mute @DEFAULT_SINK@) == *yes* ]] && echo true || echo false'"
                 }
             ]
         }

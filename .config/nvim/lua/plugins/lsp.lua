@@ -20,6 +20,11 @@ return {
       "williamboman/mason-lspconfig.nvim",
     },
     config = function()
+      -- Suppress Neovim 0.11 lspconfig deprecation warning
+      vim.g.lspconfig = {
+        _suppress_deprecation_warning = true
+      }
+      
       local lspconfig = require("lspconfig")
 
       lspconfig.lua_ls.setup({

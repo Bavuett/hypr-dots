@@ -1,8 +1,10 @@
 /* Spring pastel color palette */
-@define-color background #fff7f3;
-@define-color foreground #6b5b73;
-@define-color select     #f7d9e5;
+@define-color background      #fff7f3;
+@define-color foreground      #3d2f47;   /* scurito per contrasto ≥7:1 */
+@define-color foreground-muted #8a7393;  /* secondario, ≥4.5:1 */
+@define-color select          #f7d9e5;
 
+/* Pastello originale (sfondo/decorazioni) */
 @define-color pink       #f5b8c6;
 @define-color yellow     #fffaa0;
 @define-color blue       #aec6cf;
@@ -11,3 +13,12 @@
 @define-color orange     #f6d7b2;
 @define-color green      #bdeccf;
 @define-color gray       #cbb9c4;
+
+/* Varianti scure per testo — contrasto garantito su sfondo chiaro */
+@define-color pink-text   #9e3f5a;
+@define-color blue-text   #3a6b7a;
+@define-color purple-text #5c3d8a;
+@define-color red-text    #8f2d3a;
+@define-color orange-text #7a5020;
+@define-color green-text  #2d6e4a;
+@define-color gray-text   #5a4d60;

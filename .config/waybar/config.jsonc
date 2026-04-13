@@ -1,34 +1,29 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 36,
-    "spacing": 4,
+    "height": 38,
+    "margin-top": 6,
+    "margin-left": 6,
+    "margin-right": 6,
+    "spacing": 6,
     "modules-left": [
         "hyprland/workspaces",
         "hyprland/window"
     ],
     "modules-center": [
-        "clock"
+        "hyprland/submap"
     ],
     "modules-right": [
-        "tray",
-        "bluetooth",
         "network",
+        "bluetooth",
         "pulseaudio",
         "battery",
+        "clock",
+        "custom/notification",
         "custom/power"
     ],
     "hyprland/workspaces": {
-        "format": "{icon}",
-        "format-icons": {
-            "1": "󰈹",
-            "2": "",
-            "3": "",
-            "4": "󰎈",
-            "5": "",
-            "active": "",
-            "default": ""
-        },
+        "format": "{name}",
         "on-click": "activate",
         "sort-by-number": true
     },
@@ -37,9 +32,13 @@
         "max-length": 50,
         "separate-outputs": true
     },
+    "hyprland/submap": {
+        "format": "✌️ {} MODE",
+        "tooltip": false
+    },
     "clock": {
-        "format": "  {:%H:%M}",
-        "format-alt": "  {:%A, %B %d, %Y}",
+        "format": "󰥔 {:%H:%M}",
+        "format-alt": "󰃭 {:%A, %B %d, %Y}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
     "battery": {
@@ -51,15 +50,30 @@
         "format-charging": "󰂄 {capacity}%",
         "format-plugged": "󰚥 {capacity}%",
         "format-alt": "{icon} {time}",
-        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+        "format-icons": [
+            "󰁺",
+            "󰁻",
+            "󰁼",
+            "󰁽",
+            "󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂",
+            "󰁹"
+        ]
     },
     "network": {
-        "format-wifi": "󰤨 {signalStrength}%",
+        "format-wifi": "󰤨 {essid}",
         "format-ethernet": "󰈀 {ipaddr}",
-        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "󰤭 ",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-linked": "󰈀 {ifname} (no IP)",
+        "format-disconnected": "󰤭  Disconnesso",
+        "format-disconnecting": "󰤫  ...",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "tooltip-format-ethernet": "󰈀 {ifname}\n  IP: {ipaddr}\n󰊗 Gateway: {gwaddr}",
+        "tooltip-format-disconnected": "Nessuna connessione di rete",
+        "on-click": "nm-connection-editor",
+        "on-click-right": "mode"
     },
     "bluetooth": {
         "format": "󰂯",
@@ -83,12 +97,22 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["󰕿", "󰖀", "󰕾"]
+            "default": [
+                "󰕿",
+                "󰖀",
+                "󰕾"
+            ]
         },
         "on-click": "pavucontrol"
     },
     "tray": {
         "spacing": 10
+    },
+    "custom/notification": {
+        "tooltip": false,
+        "format": "",
+        "on-click": "swaync-client -t -sw",
+        "escape": true
     },
     "custom/power": {
         "format": "⏻",

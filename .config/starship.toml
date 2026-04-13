@@ -4,42 +4,42 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[╭─](bold #4a4a5e)$os$username$hostname$directory$git_branch$git_status$python$nodejs$rust$golang$java$package
-[╰─](bold #4a4a5e)$character"""
+[╭─](bold #504055)$os$username$hostname$directory$git_branch$git_status$python$nodejs$rust$golang$java$package
+[╰─](bold #504055)$character"""
 
 add_newline = true
 
 [character]
-success_symbol = "[❯](bold #f5b8c6)"
-error_symbol = "[❯](bold #f5b8b8)"
-vimcmd_symbol = "[❮](bold #b8f5c6)"
+success_symbol = "[❯](bold #8f2d3a)"
+error_symbol = "[❯](bold #bf3d4f)"
+vimcmd_symbol = "[❮](bold #3d2f47)"
 
 [os]
 disabled = false
-style = "bold #aec6cf"
+style = "bold #244b58"
 
 [os.symbols]
 Fedora = " "
 Linux = " "
 
 [username]
-style_user = "bold #f5b8c6"
-style_root = "bold #f5b8b8"
+style_user = "bold #7a2e44"
+style_root = "bold #bf3d4f"
 format = "[$user]($style) "
 show_always = false
 
 [hostname]
-style = "bold #fffaa0"
+style = "bold #7a5020"
 format = "[@$hostname]($style) "
 ssh_only = true
 
 [directory]
-style = "bold #aec6cf"
+style = "bold #244b58"
 format = "[$path]($style)[$read_only]($read_only_style) "
 truncation_length = 4
 truncation_symbol = "…/"
 read_only = " 󰌾"
-read_only_style = "#f5b8b8"
+read_only_style = "#bf3d4f"
 
 [directory.substitutions]
 "Documents" = "󰈙 "
@@ -50,11 +50,11 @@ read_only_style = "#f5b8b8"
 
 [git_branch]
 symbol = " "
-style = "bold #c9b8f5"
+style = "bold #4f3674"
 format = "on [$symbol$branch]($style) "
 
 [git_status]
-style = "bold #fffaa0"
+style = "bold #7a5020"
 format = '([$all_status$ahead_behind]($style) )'
 conflicted = "⚡"
 ahead = "⇡${count}"
@@ -69,32 +69,32 @@ deleted = "✘"
 
 [python]
 symbol = " "
-style = "bold #fffaa0"
+style = "bold #7a5020"
 format = "[$symbol($virtualenv )]($style)"
 
 [nodejs]
 symbol = " "
-style = "bold #b8f5c6"
+style = "bold #4a9b6f"
 format = "[$symbol($version )]($style)"
 
 [rust]
 symbol = " "
-style = "bold #f5d4b8"
+style = "bold #8c4c1a"
 format = "[$symbol($version )]($style)"
 
 [golang]
 symbol = " "
-style = "bold #aec6cf"
+style = "bold #244b58"
 format = "[$symbol($version )]($style)"
 
 [java]
 symbol = " "
-style = "bold #f5b8b8"
+style = "bold #8f2d3a"
 format = "[$symbol($version )]($style)"
 
 [package]
 symbol = "󰏗 "
-style = "bold #c9b8f5"
+style = "bold #4f3674"
 format = "[$symbol$version]($style) "
 disabled = false
 

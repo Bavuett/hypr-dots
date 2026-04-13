@@ -3,7 +3,7 @@
 * {
     font-family: "JetBrainsMono Nerd Font";
     font-size: 13px;
-    font-weight: bold;
+    font-weight: 500;
     background-color: transparent;
     border-radius: 5px;
     min-height: 0;
@@ -11,40 +11,46 @@
 
 window,
 tooltip {
-    background-color: @background;
+    background: alpha(@background, 0.90);
+    border: 2px solid @pink;
+    border-radius: 6px;
+}
+tooltip label {
+    color: @foreground;
+    font-weight: 600;
 }
 
 #waybar {
-    background: alpha(@background, 0.75);
-    border-bottom: 2px solid alpha(@pink, 0.4);
-    border-radius: 0;
+    background-color: transparent;
+    border: none;
 }
 
 /* Workspaces */
 #workspaces {
-    margin: 1px 4px;
+    background: alpha(@background, 0.70);
+    border: 2px solid @pink;
+    border-radius: 6px;
+    padding: 0 4px;
 }
 
 #workspaces button {
     color: @foreground;
     border: none;
-    padding: 0 6px;
-    border-radius: 6px;
+    padding: 0 8px;
+    margin: 4px 2px;
+    border-radius: 4px;
+    transition: background-color 0.1s ease, color 0.1s ease;
 }
 
 #workspaces button:hover {
     color: @pink;
     background-color: alpha(@select, 0.6);
-    border-bottom: 2px solid @pink;
-    padding: 0 8px;
 }
 
 #workspaces button.active {
-    color: @background;
+    color: @foreground;
+    font-weight: 800;
     background-color: @pink;
-    padding: 0 8px;
-    margin: 2px;
-    border-radius: 6px;
 }
 
 #workspaces button.urgent {
@@ -54,12 +60,16 @@ tooltip {
 
 /* Window title */
 #window {
-    color: alpha(@foreground, 0.7);
-    font-style: italic;
-    padding: 0 8px;
+    background: alpha(@background, 0.70);
+    border: 2px solid @pink;
+    border-radius: 6px;
+    color: @foreground;
+    font-weight: bold;
+    padding: 0 14px;
 }
 
 /* Right modules */
+#custom-notification,
 #custom-power,
 #tray,
 #bluetooth,
@@ -67,12 +77,25 @@ tooltip {
 #battery,
 #pulseaudio,
 #clock {
-    color: @foreground;
-    margin: 2px 0;
-    padding: 0 10px;
+    background: alpha(@background, 0.70);
+    border: 2px solid @pink;
     border-radius: 6px;
+    color: @foreground;
+    padding: 0 12px;
+    font-weight: 600;
 }
 
+#submap {
+    background: alpha(@red, 0.85);
+    color: @background;
+    font-weight: 800;
+    padding: 0 16px;
+    border: 2px solid @background;
+    border-radius: 6px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.4);
+}
+
+#custom-notification:hover,
 #custom-power:hover,
 #bluetooth:hover,
 #network:hover,
@@ -83,23 +106,27 @@ tooltip {
 }
 
 #bluetooth {
-    color: @yellow;
+    color: @orange-text;
 }
 
 #network {
-    color: @green;
+    color: @blue-text;
 }
 
 #battery {
-    color: @purple;
+    color: @purple-text;
+}
+
+#battery.charging {
+    color: @green-text;
 }
 
 #battery.warning {
-    color: @orange;
+    color: @orange-text;
 }
 
 #battery.critical {
-    color: @red;
+    color: @red-text;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
@@ -108,23 +135,26 @@ tooltip {
 }
 
 #pulseaudio {
-    color: @blue;
+    color: @blue-text;
 }
 
 #pulseaudio.muted {
-    color: @gray;
+    color: @gray-text;
 }
 
 #clock {
-    color: @pink;
-    margin-right: 10px;
+    color: @pink-text;
 }
 
 #custom-power {
-    color: @red;
-    margin-left: 10px;
-    padding: 0 14px 0 10px;
+    color: @red-text;
+    padding: 0 13px 0 11px;
     font-size: 16px;
+}
+
+#custom-notification {
+    color: @orange-text;
+    padding: 0 14px 0 10px;
 }
 
 #tray {

@@ -4,9 +4,10 @@ window {
     margin: 0;
     border: 2px solid #f5b8c6;
     border-radius: 12px;
-    background-color: rgba(255, 247, 243, 0.95);
+    background-color: rgba(255, 247, 243, 0.72);
     font-family: "JetBrainsMono Nerd Font";
     font-size: 14px;
+    color: #3d2f47;
 }
 
 #input {
@@ -39,7 +40,7 @@ window {
 }
 
 #text {
-    color: #6b5b73;
+    color: #3d2f47;
     padding: 2px 8px;
 }
 
@@ -55,7 +56,8 @@ window {
 }
 
 #entry:selected #text {
-    color: #f5b8c6;
+    color: #9e3f5a;  /* pink-text: contrasto >4.5:1 sul bg semitrasparente */
+    font-weight: bold;
 }
 
 #img {
