@@ -1,0 +1,82 @@
+# ============================================================
+# Hypr-dots — Dipendenze (Fedora / DNF)
+# ============================================================
+#
+# 1. Abilita il repo COPR per pacchetti extra:
+#
+#   sudo dnf copr enable solopasha/hyprland -y
+#
+# 2. Installa tutti i pacchetti:
+#
+#   sudo dnf install -y $(grep -v '^#' dependencies.txt | grep -v '^$' | tr '\n' ' ')
+#
+# 3. Installa Starship (non disponibile su DNF):
+#
+#   curl -fsSLo /tmp/install-starship.sh https://starship.rs/install.sh
+#   sh /tmp/install-starship.sh
+#
+# 4. (Opzionale) Google Chrome:
+#
+#   sudo dnf install -y fedora-chromium-config
+#   sudo dnf install -y google-chrome-stable
+#
+# ============================================================
+
+# --- Wayland / Compositor ---
+hyprland
+hyprlock
+hyprpicker
+xdg-desktop-portal-hyprland
+xdg-user-dirs
+
+# --- Bar, launcher, notifiche, logout ---
+waybar
+wofi
+swaync
+wlogout
+
+# --- Terminale ---
+kitty
+
+# --- Wallpaper ---
+swww
+
+# --- Screenshot ---
+hyprshot
+
+# --- File manager ---
+nautilus
+
+# --- Audio ---
+pipewire
+wireplumber
+pavucontrol
+
+# --- Rete ---
+network-manager-applet
+nm-connection-editor
+
+# --- Bluetooth ---
+blueman
+
+# --- Clipboard ---
+cliphist
+wl-clipboard
+
+# --- Luminosità / Media ---
+brightnessctl
+playerctl
+
+# --- Autenticazione Polkit ---
+polkit-gnome
+
+# --- Font ---
+jetbrains-mono-fonts
+google-noto-emoji-fonts
+fontawesome-fonts
+
+# --- Editor ---
+neovim
+git
+ripgrep
+fd-find
